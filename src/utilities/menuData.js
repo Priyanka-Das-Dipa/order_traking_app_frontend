@@ -1,3 +1,13 @@
+import img1 from '../../src/assets/image12.jpg'
+import img2 from '../../src/assets/pizza1.jpg'
+import img3 from '../../src/assets/burger1.jpg'
+import img4 from '../../src/assets/burger2.jpg'
+import img5 from '../../src/assets/img6.jpg'
+import img6 from '../../src/assets/img5.jpg'
+import img7 from '../../src/assets/salad1.jpg'
+import img8 from '../../src/assets/salad2.jpg'
+import img9 from '../../src/assets/icecream1.jpg'
+import img10 from '../../src/assets/icecream2.jpg'
 export const menuItems = [
   {
     id: 'item-001',
@@ -5,7 +15,7 @@ export const menuItems = [
     description: 'Classic tomato sauce, mozzarella, and fresh basil',
     price: 12.99,
     category: 'Pizza',
-    image: 'https://ibb.co/zTmWDvbT'
+    image: img1,
   },
   {
     id: 'item-002',
@@ -13,7 +23,7 @@ export const menuItems = [
     description: 'Tomato sauce, mozzarella, and pepperoni',
     price: 14.99,
     category: 'Pizza',
-    image: 'https://ibb.co/zTmWDvbT'
+    image: img2
   },
   {
     id: 'item-003',
@@ -21,7 +31,7 @@ export const menuItems = [
     description: 'Beef patty, cheese, lettuce, tomato, and special sauce',
     price: 10.99,
     category: 'Burger',
-    image: 'https://ibb.co/zTmWDvbT'
+    image: img3
   },
   {
     id: 'item-004',
@@ -29,7 +39,7 @@ export const menuItems = [
     description: 'Grilled chicken, lettuce, tomato, and mayo',
     price: 9.99,
     category: 'Burger',
-    image: 'https://ibb.co/zTmWDvbT'
+    image: img4
   },
   {
     id: 'item-005',
@@ -37,7 +47,7 @@ export const menuItems = [
     description: 'Creamy pasta with bacon and parmesan',
     price: 13.99,
     category: 'Pasta',
-    image: 'https://ibb.co/zTmWDvbT'
+    image: img5
   },
   {
     id: 'item-006',
@@ -45,7 +55,7 @@ export const menuItems = [
     description: 'Spicy tomato sauce with garlic and chili',
     price: 11.99,
     category: 'Pasta',
-    image: 'https://ibb.co/zTmWDvbT'
+    image: img6
   },
   {
     id: 'item-007',
@@ -53,7 +63,7 @@ export const menuItems = [
     description: 'Romaine lettuce, croutons, parmesan, Caesar dressing',
     price: 8.99,
     category: 'Salad',
-    image: 'https://ibb.co/zTmWDvbT'
+    image: img7
   },
   {
     id: 'item-008',
@@ -61,7 +71,7 @@ export const menuItems = [
     description: 'Tomatoes, cucumber, olives, feta cheese',
     price: 9.99,
     category: 'Salad',
-    image: 'https://ibb.co/zTmWDvbT'
+    image: img8
   },
   {
     id: 'item-009',
@@ -93,7 +103,7 @@ export const menuItems = [
     description: 'Vanilla ice cream with chocolate sauce',
     price: 5.99,
     category: 'Dessert',
-    image: 'https://ibb.co/zTmWDvbT'
+    image: img10
   }
 ];
 

@@ -1,7 +1,7 @@
 /* eslint-disable react-hooks/set-state-in-effect */
 import { useEffect, useState } from "react";
 import { useSocket } from "./hooks/useSocket";
-import { Navigate, Route, Router, Routes } from "react-router";
+// import { Navigate, Route, Router, Routes } from "react-router";
 import Notification from "./components/common/Notification";
 import Header from "./components/common/Header";
 import Menu from "./components/customers/Menu";
@@ -11,6 +11,13 @@ import OrderTraking from "./components/customers/OrderTraking";
 import OrderHistory from "./components/customers/OrderHistory";
 import AdminDashboard from "./components/admin/AdminDashboard";
 import AdminLogin from "./components/admin/AdminLogin";
+import {
+  BrowserRouter,
+  Navigate,
+  Route,
+  Router,
+  Routes,
+} from "react-router-dom";
 
 function App() {
   const { socket, connected } = useSocket();
@@ -103,8 +110,7 @@ function App() {
 
   return (
     <>
-    
-      <Router>
+      <BrowserRouter>
         <div className="min-h-screen text-slate-800">
           {/* Notification */}
           {notification && (
@@ -206,7 +212,7 @@ function App() {
             <Route path="*" element={<Navigate to="/" replace />} />
           </Routes>
         </div>
-      </Router>
+      </BrowserRouter>
     </>
   );
 }

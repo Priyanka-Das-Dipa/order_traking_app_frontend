@@ -48,7 +48,12 @@ const Menu = ({ onAddToCart }) => {
             >
               {/* Item Image/Emoji */}
               <div className="bg-linear-to-br from-blue-50 to-blue-100 h-40 flex items-center justify-center">
-                <span className="text-7xl">{item.image}</span>
+                {/* <span className="text-7xl">{item.image}</span> */}
+                <img
+                  src={item.image}
+                  alt={item.name}
+                  className="h-full object-cover w-full"
+                />
               </div>
 
               {/* Item Details */}
