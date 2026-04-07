@@ -1,7 +1,6 @@
 import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import ConnectionStatus from "./ConnectionStatus";
-// import { useNavigate } from "react-router";
 
 const Header = ({
   cartCount = 0,

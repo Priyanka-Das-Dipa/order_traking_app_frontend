@@ -307,7 +307,7 @@ const OrderTraking = ({ socket, onShowNotification }) => {
             <div className="space-y-2 border-t pt-4">
               <div className="flex justify-between text-gray-700">
                 <span>Subtotal</span>
-                <span>${order.subtotal.toFixed(2)}</span>
+                {/* <span>${order.subtotal.toFixed(2)}</span> */}
               </div>
               <div className="flex justify-between text-gray-700">
                 <span>Tax</span>

@@ -60,7 +60,7 @@ const AdminLogin = ({ socket, onLoginSuccess, onShowNotification }) => {
 
               <button
                 type="submit"
-                disabled={loading}
+                 disabled={loading || !socket}
                 className="w-full bg-blue-600 hover:bg-blue-700 text-white py-3 rounded-lg font-bold text-lg transition transform hover:scale-105 active:scale-95 disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none"
               >
                 {loading ? "Logging in..." : "Login"}
