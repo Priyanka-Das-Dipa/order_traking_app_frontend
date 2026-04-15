@@ -284,7 +284,13 @@ const OrderTraking = ({ socket, onShowNotification }) => {
                   className="flex justify-between items-center py-2 border-b"
                 >
                   <div className="flex items-center gap-3">
-                    <span className="text-2xl">{item.image}</span>
+                    {/* <span className="text-2xl">{item.image}</span>
+                     */}
+                    <img
+                      src={item.image}
+                      alt={item.name}
+                      className="w-16 h-16 object-cover rounded-lg"
+                    />
                     <div>
                       <p className="font-medium">
                         {item.quantity}x {item.name}
@@ -307,7 +313,7 @@ const OrderTraking = ({ socket, onShowNotification }) => {
             <div className="space-y-2 border-t pt-4">
               <div className="flex justify-between text-gray-700">
                 <span>Subtotal</span>
-                {/* <span>${order.subtotal.toFixed(2)}</span> */}
+                <span>${order.subTotal.toFixed(2)}</span>
               </div>
               <div className="flex justify-between text-gray-700">
                 <span>Tax</span>

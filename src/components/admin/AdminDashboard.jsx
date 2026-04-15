@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react";
 import ConnectionStatus from "../common/ConnectionStatus";
 import OrderCard from "./OrderCard";
+import OrderDetails from "./OrderDetails";
 
 const AdminDashboard = ({ socket, onShowNotification, onLogout }) => {
   const [orders, setOrders] = useState([]);
@@ -345,7 +346,7 @@ const AdminDashboard = ({ socket, onShowNotification, onLogout }) => {
 
         {/* Order Detail Modal */}
         {selectedOrder && (
-          <OrderDetail
+          <OrderDetails
             order={selectedOrder}
             onClose={() => setSelectedOrder(null)}
             socket={socket}
