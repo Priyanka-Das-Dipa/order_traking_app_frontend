@@ -15,7 +15,7 @@ const ConnectionStatus = ({ connected, isFlax = false }) => {
         {connected ? "Connected" : "Disconnected"}
       </span>
     </div>
-  );
+  )
 };
 
 export default ConnectionStatus;
