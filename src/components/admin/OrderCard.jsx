@@ -70,7 +70,7 @@ const OrderCard = ({
             </p>
           </div>
           <div className="text-right">
-            <p className="text-xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-indigo-600 to-violet-600">
+            <p className="text-xl font-bold bg-clip-text text-transparent bg-linear-to-r from-indigo-600 to-violet-600">
               ${order.totalAmount.toFixed(2)}
             </p>
             <p className="text-xs font-medium text-slate-400">
@@ -82,7 +82,7 @@ const OrderCard = ({
         {/* Customer Info */}
         <div className="mb-5 pb-5 border-b border-slate-100 space-y-2">
           <div className="flex items-start gap-2">
-            <span className="min-w-[1.25rem] text-center text-slate-400">
+            <span className="min-w-5 text-center text-slate-400">
               👤
             </span>
             <div>
@@ -93,7 +93,7 @@ const OrderCard = ({
             </div>
           </div>
           <div className="flex items-start gap-2">
-            <span className="min-w-[1.25rem] text-center text-slate-400">
+            <span className="min-w-5 text-center text-slate-400">
               📍
             </span>
             <p className="text-xs text-slate-500 font-medium leading-relaxed line-clamp-2">
