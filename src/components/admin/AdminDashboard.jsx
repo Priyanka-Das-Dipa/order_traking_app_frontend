@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 /* eslint-disable react-hooks/static-components */
 /* eslint-disable react-hooks/set-state-in-effect */
 import { useEffect, useState } from "react";
@@ -7,7 +8,13 @@ import OrderDetails from "./OrderDetails";
 
 const AdminDashboard = ({ socket, onShowNotification, onLogout }) => {
   const [orders, setOrders] = useState([]);
-  const [stats, setStats] = useState(null);
+  const [stats, setStats] = useState({
+    totalToday: 0,
+    pending: 0,
+    confirmed: 0,
+    preparing: 0,
+    delivered: 0,
+  });
   const [activeTab, setActiveTab] = useState("pending");
   const [selectedOrder, setSelectedOrder] = useState(null);
   const [loading, setLoading] = useState(true);
@@ -25,8 +32,10 @@ const AdminDashboard = ({ socket, onShowNotification, onLogout }) => {
   };
 
   const loadStats = () => {
-    socket.emit("getLiveStats", (response) => {
-      if (response.success) {
+    socket.emit("getLiveStatus", {}, (response) => {
+      // console.log("Stats response:", response);
+
+      if (response?.success && response.stats) {
         setStats(response.stats);
       }
     });
@@ -34,7 +43,6 @@ const AdminDashboard = ({ socket, onShowNotification, onLogout }) => {
 
   useEffect(() => {
     if (!socket) return;
-
     loadOrders();
     loadStats();
 
